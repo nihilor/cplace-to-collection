@@ -1,6 +1,10 @@
 # cplace-to-collection
 
-Converts as XML exported cPlace wikis into collections based on markdown with YAML frontmatter.
+Converts as XML exported cPlace data into collections based on Markdown files with YAML frontmatter.
+
+![](https://nodei.co/npm/cplace-to-collection.png?downloads=true&stars=true)
+
+![](https://david-dm.org/nihilor/cplace-to-collection.png)
 
 # How to install?
 
