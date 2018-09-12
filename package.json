@@ -1,0 +1,26 @@
+{
+  "name": "cplace-to-collection",
+  "version": "0.1.0",
+  "description": "Converts as XML exported cPlace wikis into collections based on markdown with YAML frontmatter.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cPlace",
+    "Wiki",
+    "Collection",
+    "Jekyll",
+    "Markdown",
+    "YAML",
+    "Frontmatter",
+    "Converter"
+  ],
+  "author": "Mark Lubkowitz <me@mlu.io>",
+  "license": "MIT",
+  "dependencies": {
+    "json2yaml": "^1.1.0",
+    "turndown": "^5.0.1",
+    "xml2json": "^0.11.2"
+  }
+}
