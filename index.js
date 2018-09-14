@@ -194,6 +194,10 @@ module.exports = function (source, destination, _options) {
     }
     let dataPath = destination + '_data/';
     if (!fs.existsSync(dataPath)) cplace.createPath(dataPath);
+    // callback function via options. the callback retrieves the datatypes as an array, modifies and returns them
+    if (_options.hasOwnProperty('datatypesHook') && typeof _options.datatypesHook == 'function') {
+        dataTypes = _options.datatypesHook(dataTypes);
+    }
     cplace.saveToYAML(dataPath + 'datatypes', dataTypes);
 
     // rootpage
