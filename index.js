@@ -317,7 +317,7 @@ module.exports = function (source, destination, _options) {
                     /href=\"\/pages\/([a-z0-9]+)\/[\w-]+\"/gim,
                     function(match, p1) {
                         return idToFilenameIndex.hasOwnProperty(p1)
-                            ? `/href="${idToFilenameIndex[p1].url}.html"`
+                            ? `href="/${idToFilenameIndex[p1].url}.html"`
                             : "";
                     }
                 );

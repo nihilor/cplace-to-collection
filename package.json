@@ -1,6 +1,6 @@
 {
   "name": "cplace-to-collection",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Converts as XML exported cPlace data into collections based on Markdown files with YAML frontmatter.",
   "main": "index.js",
   "scripts": {
