@@ -151,7 +151,9 @@ function CPlaceToCollection() {}
 
 module.exports = function (source, destination, _options) {
     // optimize merging and default options
-    _options = _options || {};
+    _options                = _options || {};
+    _options.relink         = _options.relink || false;
+    _options.prependLinks   = _options.prependLinks || '';
     destination = destination.substring(destination.length - 1) != '/' ? destination + '/' : destination;
     var cplace = new CPlaceToCollection;
 
@@ -317,7 +319,7 @@ module.exports = function (source, destination, _options) {
                     /href=\"\/pages\/([a-z0-9]+)\/[\w-]+\"/gim,
                     function(match, p1) {
                         return idToFilenameIndex.hasOwnProperty(p1)
-                            ? `href="/${idToFilenameIndex[p1].url}.html"`
+                            ? `href="${_options.prependLinks}${idToFilenameIndex[p1].url}.html"`
                             : "";
                     }
                 );
